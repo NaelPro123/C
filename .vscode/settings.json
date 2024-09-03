@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "float.h": "c",
+        "forward_list": "c",
+        "list": "c",
+        "limits.h": "c"
+    }
+}
