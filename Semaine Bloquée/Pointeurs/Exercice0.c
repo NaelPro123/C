@@ -1,4 +1,4 @@
-#include <stdio.h>    // Pour les entrées/sorties standard (printf, scanf, etc.)
+ #include <stdio.h>    // Pour les entrées/sorties standard (printf, scanf, etc.)
 #include <stdlib.h>   // Pour les fonctions utilitaires générales (malloc, free, atoi, etc.)
 #include <string.h>   // Pour les fonctions de manipulation de chaînes (strcpy, strcmp, etc.)
 #include <math.h>     // Pour les fonctions mathématiques (sin, cos, sqrt, etc.)

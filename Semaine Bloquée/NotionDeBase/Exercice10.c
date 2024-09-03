@@ -8,38 +8,44 @@
 #include <float.h>    // Pour les constantes définissant les limites des types de données à virgule flottante
 
 /**
-Écrire une procédure bin2dec() de prototype 
-        void bin2dec(char bin[], char dec[])
+ * void dec2bin(char dec[], char bin[])
+ * Decimal vers Binaire
  */
+#define ARRAY_LEN 20
 
-void bin2dec(char bin[], char dec[]){
-    int decimalValeur = 0;
-    int length = strlen(bin);
-
-    for (size_t i = 0; i < length; i++)
+void dec2bin(char dec[], char bin[]){
+    int number = atoi(dec);
+    for (int i = number;  i > 0; i--)
     {
-        if (bin[i] == '1')
+        if (number % 2 == 1 )
         {
-            decimalValeur += pow(2,length - 1 - i);
-
+            bin[i] = '1';
+            number = number / 2;
+        }else{
+            bin[i] = '0';
         }
         
     }
-    sprintf(dec, "%d", decimalValeur); // Convert the decimal value to a string
     
-    
-}
+
+}  
+
 
 int main(void){
-    char binaire[256]; 
-    char decimale[256];
+    char dec[ARRAY_LEN];
+    char bin[ARRAY_LEN];
 
-    printf("Donner un nombre en binaire : ");
-    scanf("%255s", binaire); 
+    printf("Saisir un entier en base 10");
+    scanf("%s" , dec);
+    
 
-    bin2dec(binaire, decimale);
+    dec2bin(dec,bin);
 
-    printf("Valeur decimale : %s" , decimale);
+    printf("<%s> en binaire : <%s>" , dec , bin);
+    
 
     return EXIT_SUCCESS;
 }
+
+
+
